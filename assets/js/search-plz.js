@@ -1,4 +1,57 @@
+
+
 jQuery(document).ready(function () {
+
+    // Parse & Cache CSV-Data
+    var csvData;
+
+    var url = jQuery('#tk-ud-plz-url').val();
+
+    var settings = {
+        download: true,
+        delimiter: ",",
+        header: true,
+        skipEmptyLines: true,
+        complete: function(data) {
+            csvData = data.data;
+        }
+    };
+    Papa.parse(url + "assets/resources/plzTeam/data/zuordnung_plz_ort.csv", settings);
+
+    // Starte Suche
+    jQuery('#tk_ud_state').on('change', function(event) {
+        event.stopPropagation();
+        var query = jQuery(this).val().toLowerCase();
+        var pattern_bundesland  = new RegExp("^" + query + "$");
+        var plzs = '';
+
+        var i = 0;
+        jQuery.each(csvData, function(index, value) {
+
+            // Pattern
+            var pattern_plz         = new RegExp("^" + query + ".*$");
+
+            // Suchabfrage
+            if( value.bundesland.toLowerCase().match(pattern_bundesland) ) {
+
+                // Add
+                if(i > 0){
+                    plzs += ',';
+                }
+                plzs += value.plz;
+                i++;
+            }
+        });
+        jQuery('#tk-ud-s-plz-multi').val(plzs).trigger('change');
+
+        var src = jQuery(this).find(':selected').attr('data-src')
+
+        console.log(src);
+
+        jQuery("#deMap").attr('src', src);
+
+        return false;
+    });
 
     // Check if plz is entered
     jQuery(document).on('change keyup paste click', '#tk-ud-s-plz', function () {
@@ -7,6 +60,7 @@ jQuery(document).ready(function () {
 
         if (s_plz.length > 4) {
             jQuery('#tk-ud-s-plz-multi').val('');
+            jQuery("#tk_ud_state").val('none').trigger('change');
             jQuery('#tk-ud-paged').val(0);
             tk_ud_ajax_search();
         }
@@ -25,7 +79,6 @@ jQuery(document).ready(function () {
         }
     });
 
-
     // Check if plz is entered
     jQuery(document).on('change', '#tk-ud-s-plz-multi', function () {
 
@@ -39,12 +92,19 @@ jQuery(document).ready(function () {
 
     });
 
-
     jQuery(document).on('click', '.tk-ud-map-state', function () {
         var state = jQuery(this).attr('data-state');
+        var src = jQuery(this).attr('data-src');
+
         jQuery("#tk_ud_state").val(state).trigger('change');
+        jQuery("#deMap").attr('src', src);
+
         return false;
     });
 
-
 });
+
+
+function ReplaceImage(filename) {
+			//document.getElementById("deMap").src = filename;
+}
