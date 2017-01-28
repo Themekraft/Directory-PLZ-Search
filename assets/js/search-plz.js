@@ -24,4 +24,11 @@ jQuery(document).ready(function () {
         }
     });
 
+    jQuery(document).on('click', '.tk-ud-map-state', function () {
+        var state = jQuery(this).attr('data-state');
+        jQuery("#tk_ud_state").val(state).trigger('change');
+        return false;
+    });
+
+
 });

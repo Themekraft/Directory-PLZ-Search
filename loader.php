@@ -139,6 +139,7 @@ class TK_Ultimate_Directory_PLZ_SEARCH_DE {
 	 */
 	function front_js() {
 		wp_enqueue_script( 'tk-ud-plz-search-de', plugins_url( 'assets/js/search-plz.js', __FILE__ ), array( 'jquery' ) );
+		wp_enqueue_script( 'tk-ud-plz-papaparse', plugins_url( 'assets/resources/plzTeam/js/papaparse.min.js', __FILE__ ), array( 'jquery' ) );
 	}
 
 
