@@ -28,25 +28,25 @@ function tk_ud_directory_search_map_de( $atts ) {
 				$('#tk_ud_state').on('change', function(event) {
 					event.stopPropagation();
 					var query = $(this).val().toLowerCase();
+					var pattern_bundesland  = new RegExp("^" + query + "$");
+					var plzs = '';
 
-					var table = $('<table class="table table-striped table-bordered table-hover"><thead><tr><th>PLZ</th><th>Ort</th><th>Bundesland</th></tr></thead><tbody></tbody></table>');
+
+					var i = 0;
 					$.each(csvData, function(index, value) {
 						// Pattern
 						var pattern_plz         = new RegExp("^" + query + ".*$");
-						var pattern_ort         = new RegExp("\\b" + query + "\\b");
-						var pattern_bundesland  = new RegExp("^" + query + "$");
-
 						// Suchabfrage
-						if( value.ort.toLowerCase().match(pattern_ort) ||
-							value.plz.match(pattern_plz) ||
-							value.bundesland.toLowerCase().match(pattern_bundesland)
-						) {
-							// Tabelle erstellen
-							$('<tr><td>' + value.plz + '</td><td><a title="Karte ' + value.ort +  '" target="_blank" href="http://www.openstreetmap.org/relation/' + value.osm_id + '"><span class="glyphicon glyphicon-map-marker small"></span> ' + value.ort + '</a></td><td>' + value.bundesland + '</td></tr>').appendTo(table.find('tbody'));
+
+						if( value.bundesland.toLowerCase().match(pattern_bundesland) ) {
+							if(i > 0){
+								plzs += ',';
+							}
+							plzs += value.plz;
+							i++;
 						}
 					});
-
-					$('#search-result').html(table);
+					jQuery('#tk-ud-s-plz-multi').val(plzs).trigger('change')
 					return false;
 				});
 			});

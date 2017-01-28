@@ -6,6 +6,7 @@ jQuery(document).ready(function () {
         var s_plz = jQuery(this).val();
 
         if (s_plz.length > 4) {
+            jQuery('#tk-ud-s-plz-multi').val('');
             jQuery('#tk-ud-paged').val(0);
             tk_ud_ajax_search();
         }
@@ -23,6 +24,21 @@ jQuery(document).ready(function () {
             tk_ud_ajax_search();
         }
     });
+
+
+    // Check if plz is entered
+    jQuery(document).on('change', '#tk-ud-s-plz-multi', function () {
+
+        var s_plz_multi = jQuery(this).val();
+
+        if (s_plz_multi.length > 4) {
+            jQuery('#tk-ud-s-plz').val('');
+            jQuery('#tk-ud-paged').val(0);
+            tk_ud_ajax_search();
+        }
+
+    });
+
 
     jQuery(document).on('click', '.tk-ud-map-state', function () {
         var state = jQuery(this).attr('data-state');

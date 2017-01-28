@@ -8,6 +8,7 @@ function tk_ud_plz_search_form(){
 		<div class="row">
 			<div class="col-lg-6"><input type="text" value="" placeholder="<?php _e( 'PLZ', 'tk_ud' ); ?>" name="s_plz" minlength=5 maxlength=5 id="tk-ud-s-plz"/></div>
 			<div class="col-lg-6"><input type="number" value="" placeholder="<?php _e( 'Distance in km', 'tk_ud' ); ?>" name="s_distance" id="tk-ud-s-distance"/></div>
+			<input type="hidden" value="" id="tk-ud-s-plz-multi">
 		</div>
 	</div>
 	<?php
@@ -21,6 +22,10 @@ function tk_ud_plz_ajax_search_args($args){
 		$search_plz      = $_POST['search_plz'];
 		$search_distance = isset( $_POST['search_distance'] ) ? $_POST['search_distance'] : 0;
 		$plzs            = ogdbPLZnearby( $search_plz, $search_distance );
+	}
+
+	if ( isset( $_POST['search_plz_multi'] ) && ! empty( $_POST['search_plz_multi'] ) ) {
+		$plzs = explode(',', str_replace( '"', '', $_POST['search_plz_multi']) );
 	}
 
 	// Add the plzs string to the query
