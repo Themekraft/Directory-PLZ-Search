@@ -56,13 +56,25 @@ jQuery(document).ready(function () {
     // Check if plz is entered
     jQuery(document).on('change keyup paste click', '#tk-ud-s-plz', function () {
 
-        var s_plz = jQuery(this).val();
+        var s_plz = jQuery(this).val().toLowerCase();;
+
 
         if (s_plz.length > 4) {
             jQuery('#tk-ud-s-plz-multi').val('');
             jQuery("#tk_ud_state").val('none').trigger('change');
             jQuery('#tk-ud-paged').val(0);
             tk_ud_ajax_search();
+            jQuery.each(csvData, function(index, value) {
+                // Pattern
+                var pattern_plz         = new RegExp("^" + s_plz + ".*$");
+
+                // Suchabfrage
+                if( value.plz.match(pattern_plz) ) {
+                    // Tabelle erstellen
+                    console.log(value.bundesland);
+                    jQuery("#tk_ud_state").val(value.bundesland).trigger('change');
+                }
+            });
         }
 
     });
@@ -85,7 +97,7 @@ jQuery(document).ready(function () {
         var s_plz_multi = jQuery(this).val();
 
         if (s_plz_multi.length > 4) {
-            jQuery('#tk-ud-s-plz').val('');
+            //jQuery('#tk-ud-s-plz').val('');
             jQuery('#tk-ud-paged').val(0);
             tk_ud_ajax_search();
         }
@@ -96,9 +108,11 @@ jQuery(document).ready(function () {
         var state = jQuery(this).attr('data-state');
         var src = jQuery(this).attr('data-src');
 
+        jQuery('#tk-ud-s-plz').val('');
         jQuery("#tk_ud_state").val(state).trigger('change');
         jQuery("#deMap").attr('src', src);
 
+        tk_ud_ajax_search();
         return false;
     });
 

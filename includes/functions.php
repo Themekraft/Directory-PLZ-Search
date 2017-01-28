@@ -18,15 +18,19 @@ add_filter( 'tk_ud_ajax_search_args', 'tk_ud_plz_ajax_search_args', 1, 10 );
 function tk_ud_plz_ajax_search_args($args){
 
 	$plzs = false;
+
+	if ( isset( $_POST['search_plz_multi'] ) && ! empty( $_POST['search_plz_multi'] ) ) {
+		$plzs = explode(',', str_replace( '"', '', $_POST['search_plz_multi']) );
+	}
+
+
 	if ( isset( $_POST['search_plz'] ) && ! empty( $_POST['search_plz'] ) ) {
 		$search_plz      = $_POST['search_plz'];
 		$search_distance = isset( $_POST['search_distance'] ) ? $_POST['search_distance'] : 0;
 		$plzs            = ogdbPLZnearby( $search_plz, $search_distance );
 	}
 
-	if ( isset( $_POST['search_plz_multi'] ) && ! empty( $_POST['search_plz_multi'] ) ) {
-		$plzs = explode(',', str_replace( '"', '', $_POST['search_plz_multi']) );
-	}
+
 
 	// Add the plzs string to the query
 	if ( $plzs ) {
