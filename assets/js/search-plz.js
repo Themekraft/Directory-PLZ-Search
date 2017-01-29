@@ -116,9 +116,22 @@ jQuery(document).ready(function () {
         return false;
     });
 
+    jQuery(document).on('hover', '.tk-ud-map-state', function () {
+        var old_src = jQuery('#tk_ud_state option:selected').attr('data-src');
+        var this_src = jQuery(this).attr('data-src');
+        console.log(old_src + ' - ' + this_src);
+        jQuery("#deMap").attr('src', this_src);
+    });
+
+    jQuery(document).on('mouseout', '.tk-ud-map-state', function () {
+        var old_src = jQuery('#tk_ud_state option:selected').attr('data-src');
+        var this_src = jQuery(this).attr('data-src');
+        console.log(old_src + ' - ' + this_src);
+        jQuery("#deMap").attr('src', old_src);
+    });
+
 });
 
-
 function ReplaceImage(filename) {
-			//document.getElementById("deMap").src = filename;
+    document.getElementById("deMap").src = filename;
 }
