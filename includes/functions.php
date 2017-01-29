@@ -32,11 +32,35 @@ function tk_ud_plz_search_form(){
 	?>
 	<div class="col-md-3">
 		<div class="row">
-			<div class="col-lg-6"><input type="text" value="" placeholder="<?php _e( 'PLZ', 'tk_ud' ); ?>" name="s_plz" minlength=5 maxlength=5 id="tk-ud-s-plz"/></div>
-			<div class="col-lg-6"><input type="number" value="" placeholder="<?php _e( 'Distance in km', 'tk_ud' ); ?>" name="s_distance" id="tk-ud-s-distance"/></div>
+			<?php
+			$tk_ud_search = get_option( 'tk_ud_search', true );
+			if( isset( $tk_ud_search['display_plz'] ) && $tk_ud_search['display_plz'] == 'yes'){ ?>
+				<div class="col-lg-6"><input type="text" value="" placeholder="<?php _e( 'PLZ', 'tk_ud' ); ?>" name="s_plz" minlength=5 maxlength=5 id="tk-ud-s-plz"/></div>
+			<?php }
+
+			if( isset( $tk_ud_search['display_distance'] ) && $tk_ud_search['display_distance'] == 'yes'){ ?>
+				<div class="col-lg-6"><input type="number" value="" placeholder="<?php _e( 'Distance in km', 'tk_ud' ); ?>" name="s_distance" id="tk-ud-s-distance"/></div>
+			<?php } ?>
 			<input type="hidden" value="" id="tk-ud-s-plz-multi">
 		</div>
 	</div>
+	<?php
+}
+
+add_action('tk_ud_search_settings', 'tk_ud_plz_search_settings', 10, 1);
+function tk_ud_plz_search_settings($tk_ud_search){ ?>
+	<hr>
+	<label for="display_plz"><p><b>Display PLZ</b></p></label>
+	<select id="display_plz" name="tk_ud_search[display_plz]">
+		<option <?php selected($tk_ud_search['display_plz'], 'yes') ?> value="yes">Yes</option>
+		<option <?php selected($tk_ud_search['display_plz'], 'no') ?> value="no">No</option>
+	</select>
+
+	<label for="display_distance"><p><b>Display Distance</b></p></label>
+	<select id="display_distance" name="tk_ud_search[display_distance]">
+		<option <?php selected($tk_ud_search['display_distance'], 'yes') ?> value="yes">Yes</option>
+		<option <?php selected($tk_ud_search['display_distance'], 'no') ?> value="no">No</option>
+	</select>
 	<?php
 }
 

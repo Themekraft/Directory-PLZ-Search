@@ -29,15 +29,11 @@ jQuery(document).ready(function () {
         jQuery.each(csvData, function(index, value) {
 
             // Pattern
-            var pattern_plz         = new RegExp("^" + query + ".*$");
+            var pattern_plz = new RegExp("^" + query + ".*$");
 
             // Suchabfrage
             if( value.bundesland.toLowerCase().match(pattern_bundesland) ) {
-
-                // Add
-                if(i > 0){
-                    plzs += ',';
-                }
+                if(i > 0){ plzs += ','; }
                 plzs += value.plz;
                 i++;
             }
@@ -57,7 +53,6 @@ jQuery(document).ready(function () {
     jQuery(document).on('change keyup paste click', '#tk-ud-s-plz', function () {
 
         var s_plz = jQuery(this).val().toLowerCase();;
-
 
         if (s_plz.length > 4) {
             jQuery('#tk-ud-s-plz-multi').val('');
@@ -89,6 +84,7 @@ jQuery(document).ready(function () {
             jQuery('#tk-ud-paged').val(0);
             tk_ud_ajax_search();
         }
+
     });
 
     // Check if plz is entered
@@ -131,7 +127,3 @@ jQuery(document).ready(function () {
     });
 
 });
-
-function ReplaceImage(filename) {
-    document.getElementById("deMap").src = filename;
-}
