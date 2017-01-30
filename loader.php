@@ -77,7 +77,7 @@ class TK_Ultimate_Directory_PLZ_SEARCH_DE {
 
 	public function load_constants() {
 
-		if ( ! defined( 'TK_UD_PLZ_INSTALL_PATH' ) ) {
+		if ( ! defined( 'TK_UD_PLZ_INSTALL_URL' ) ) {
 			define( 'TK_UD_PLZ_INSTALL_URL', plugins_url( '/', __FILE__ ) );
 		}
 
