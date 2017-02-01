@@ -30,7 +30,7 @@ function tk_ud_register_search_plz() {
 add_action( 'tk_ud_search_form', 'tk_ud_plz_search_form' );
 function tk_ud_plz_search_form(){
 	?>
-	<div class="col-md-3">
+	<div class="col-md-2">
 		<div class="row">
 			<?php
 			$tk_ud_search = get_option( 'tk_ud_search', true );

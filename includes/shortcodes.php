@@ -13,29 +13,29 @@ function tk_ud_directory_search_map_de( $atts ) {
 	<div class="panel">
 		<div class="row">
 			<div class="col-md-12">
-				<input type="hidden" id="tk-ud-plz-url" value="<?php echo TK_UD_PLZ_INSTALL_URL ?>">
+				<input type="hidden" id="tk-ud-plz-url" value="<?php echo TK_UD_PLZ_INSTALL_URL; ?>">
 				<select id="tk_ud_state">
-					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL ?>assets/map/deMap.gif" value="none">Bundesland Filter</option>
-					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL  ?>assets/map/deMap8.gif" value="Baden-Württemberg">Baden-Württemberg</option>
-					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL  ?>assets/map/deMap9.gif" value="Bayern">Bayern</option>
-					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL  ?>assets/map/deMap11.gif" value="Berlin">Berlin</option>
-					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL  ?>assets/map/deMap12.gif" value="Brandenburg">Brandenburg</option>
-					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL  ?>assets/map/deMap4.gif" value="Bremen">Bremen</option>
-					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL  ?>assets/map/deMap2.gif" value="Hamburg">Hamburg</option>
-					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL  ?>assets/map/deMap6.gif" value="Hessen">Hessen</option>
-					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL  ?>assets/map/deMap13.gif" value="Mecklenburg-Vorpommern">Mecklenburg-Vorpommern</option>
-					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL  ?>assets/map/deMap3.gif" value="Niedersachsen">Niedersachsen</option>
-					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL  ?>assets/map/deMap5.gif" value="Nordrhein-Westfalen">Nordrhein-Westfalen</option>
-					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL  ?>assets/map/deMap7.gif" value="Rheinland-Pfalz">Rheinland-Pfalz</option>
-					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL  ?>assets/map/deMap10.gif" value="Saarland">Saarland</option>
-					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL  ?>assets/map/deMap14.gif" value="Sachsen">Sachsen</option>
-					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL  ?>assets/map/deMap15.gif" value="Sachsen-Anhalt">Sachsen-Anhalt</option>
-					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL  ?>assets/map/deMap1.gif" value="Schleswig-Holstein">Schleswig-Holstein</option>
-					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL  ?>assets/map/deMap16.gif" value="Thüringen">Thüringen</option>
+					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL; ?>assets/map/deMap.gif" value="none">Bundesland Filter</option>
+					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL; ?>assets/map/deMap8.gif" value="Baden-Württemberg">Baden-Württemberg</option>
+					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL; ?>assets/map/deMap9.gif" value="Bayern">Bayern</option>
+					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL; ?>assets/map/deMap11.gif" value="Berlin">Berlin</option>
+					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL; ?>assets/map/deMap12.gif" value="Brandenburg">Brandenburg</option>
+					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL; ?>assets/map/deMap4.gif" value="Bremen">Bremen</option>
+					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL; ?>assets/map/deMap2.gif" value="Hamburg">Hamburg</option>
+					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL; ?>assets/map/deMap6.gif" value="Hessen">Hessen</option>
+					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL; ?>assets/map/deMap13.gif" value="Mecklenburg-Vorpommern">Mecklenburg-Vorpommern</option>
+					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL; ?>assets/map/deMap3.gif" value="Niedersachsen">Niedersachsen</option>
+					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL; ?>assets/map/deMap5.gif" value="Nordrhein-Westfalen">Nordrhein-Westfalen</option>
+					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL; ?>assets/map/deMap7.gif" value="Rheinland-Pfalz">Rheinland-Pfalz</option>
+					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL; ?>assets/map/deMap10.gif" value="Saarland">Saarland</option>
+					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL; ?>assets/map/deMap14.gif" value="Sachsen">Sachsen</option>
+					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL; ?>assets/map/deMap15.gif" value="Sachsen-Anhalt">Sachsen-Anhalt</option>
+					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL; ?>assets/map/deMap1.gif" value="Schleswig-Holstein">Schleswig-Holstein</option>
+					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL; ?>assets/map/deMap16.gif" value="Thüringen">Thüringen</option>
 				</select>
 			</div>
 		</div>
-		<div id="mapDiv">
+		<div id="mapDiv" class="">
 
 			<img name="deMap" src="<?php echo TK_UD_PLZ_INSTALL_URL  ?>assets/map/deMap.gif" width="302" height="406" border="0" id="deMap" usemap="#m_deMap" alt="" />
 			<map name="m_deMap" id="m_deMap">

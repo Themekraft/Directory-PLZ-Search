@@ -1,5 +1,3 @@
-
-
 jQuery(document).ready(function () {
 
     // Parse & Cache CSV-Data
@@ -16,10 +14,16 @@ jQuery(document).ready(function () {
             csvData = data.data;
         }
     };
-    Papa.parse(url + "assets/resources/plzTeam/data/zuordnung_plz_ort.csv", settings);
+    Papa.parse( "http://dev.deutscher-abbruchverband.de/wp-content/plugins/directory-plz-search/assets/resources/plzTeam/data/zuordnung_plz_ort.csv", settings);
+
+
+    // Alternativ für ajax
+
+    // jQuery(document).on('#tk_ud_state', 'change', function(event) {
 
     // Starte Suche
     jQuery('#tk_ud_state').on('change', function(event) {
+
         event.stopPropagation();
         var query = jQuery(this).val().toLowerCase();
         var pattern_bundesland  = new RegExp("^" + query + "$");
@@ -37,12 +41,11 @@ jQuery(document).ready(function () {
                 plzs += value.plz;
                 i++;
             }
+
         });
         jQuery('#tk-ud-s-plz-multi').val(plzs).trigger('change');
 
         var src = jQuery(this).find(':selected').attr('data-src')
-
-        console.log(src);
 
         jQuery("#deMap").attr('src', src);
 
@@ -52,7 +55,7 @@ jQuery(document).ready(function () {
     // Check if plz is entered
     jQuery(document).on('change keyup paste click', '#tk-ud-s-plz', function () {
 
-        var s_plz = jQuery(this).val().toLowerCase();;
+        var s_plz = jQuery(this).val().toLowerCase();
 
         if (s_plz.length > 4) {
             jQuery('#tk-ud-s-plz-multi').val('');
@@ -66,7 +69,6 @@ jQuery(document).ready(function () {
                 // Suchabfrage
                 if( value.plz.match(pattern_plz) ) {
                     // Tabelle erstellen
-                    console.log(value.bundesland);
                     jQuery("#tk_ud_state").val(value.bundesland).trigger('change');
                 }
             });
@@ -76,7 +78,7 @@ jQuery(document).ready(function () {
 
     // Check for the distance
     jQuery(document).on('change keyup paste click', '#tk-ud-s-distance', function () {
-
+        console.log('tk-ud-s-distance');
         var s_distance = jQuery(this).val();
         var s_plz = jQuery('#tk-ud-s-plz').val();
 
@@ -89,7 +91,7 @@ jQuery(document).ready(function () {
 
     // Check if plz is entered
     jQuery(document).on('change', '#tk-ud-s-plz-multi', function () {
-
+        console.log('tk-ud-s-plz-multi');
         var s_plz_multi = jQuery(this).val();
 
         if (s_plz_multi.length > 4) {
@@ -101,9 +103,10 @@ jQuery(document).ready(function () {
     });
 
     jQuery(document).on('click', '.tk-ud-map-state', function () {
+        console.log('tk-ud-map-state');
         var state = jQuery(this).attr('data-state');
         var src = jQuery(this).attr('data-src');
-
+        console.log(state);
         jQuery('#tk-ud-s-plz').val('');
         jQuery("#tk_ud_state").val(state).trigger('change');
         jQuery("#deMap").attr('src', src);
@@ -115,14 +118,12 @@ jQuery(document).ready(function () {
     jQuery(document).on('hover', '.tk-ud-map-state', function () {
         var old_src = jQuery('#tk_ud_state option:selected').attr('data-src');
         var this_src = jQuery(this).attr('data-src');
-        console.log(old_src + ' - ' + this_src);
         jQuery("#deMap").attr('src', this_src);
     });
 
     jQuery(document).on('mouseout', '.tk-ud-map-state', function () {
         var old_src = jQuery('#tk_ud_state option:selected').attr('data-src');
         var this_src = jQuery(this).attr('data-src');
-        console.log(old_src + ' - ' + this_src);
         jQuery("#deMap").attr('src', old_src);
     });
 
