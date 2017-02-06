@@ -78,7 +78,6 @@ jQuery(document).ready(function () {
 
     // Check for the distance
     jQuery(document).on('change keyup paste click', '#tk-ud-s-distance', function () {
-        console.log('tk-ud-s-distance');
         var s_distance = jQuery(this).val();
         var s_plz = jQuery('#tk-ud-s-plz').val();
 
@@ -91,7 +90,6 @@ jQuery(document).ready(function () {
 
     // Check if plz is entered
     jQuery(document).on('change', '#tk-ud-s-plz-multi', function () {
-        console.log('tk-ud-s-plz-multi');
         var s_plz_multi = jQuery(this).val();
 
         if (s_plz_multi.length > 4) {
@@ -103,10 +101,8 @@ jQuery(document).ready(function () {
     });
 
     jQuery(document).on('click', '.tk-ud-map-state', function () {
-        console.log('tk-ud-map-state');
         var state = jQuery(this).attr('data-state');
         var src = jQuery(this).attr('data-src');
-        console.log(state);
         jQuery('#tk-ud-s-plz').val('');
         jQuery("#tk_ud_state").val(state).trigger('change');
         jQuery("#deMap").attr('src', src);
