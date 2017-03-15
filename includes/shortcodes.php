@@ -15,7 +15,7 @@ function tk_ud_directory_search_map_de( $atts ) {
 			<div class="col-md-12">
 				<input type="hidden" id="tk-ud-plz-url" value="<?php echo TK_UD_PLZ_INSTALL_URL; ?>">
 				<select id="tk_ud_state">
-					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL; ?>assets/map/deMap.gif" value="none">Bundesland Filter</option>
+					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL; ?>assets/map/deMap.gif" value="none"><?php _e( 'Federal State – Filter', 'tk_ud_zip_search' ); ?></option>
 					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL; ?>assets/map/deMap8.gif" value="Baden-Württemberg">Baden-Württemberg</option>
 					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL; ?>assets/map/deMap9.gif" value="Bayern">Bayern</option>
 					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL; ?>assets/map/deMap11.gif" value="Berlin">Berlin</option>

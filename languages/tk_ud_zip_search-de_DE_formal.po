@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Ultimate Directory German PLZ und State Search\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-20 13:18+0000\n"
-"PO-Revision-Date: 2017-02-20 13:19+0000\n"
+"POT-Creation-Date: 2017-03-12 12:15+0000\n"
+"PO-Revision-Date: 2017-03-12 12:15+0000\n"
 "Last-Translator: DA Admin <huck@huck-fresow.de>\n"
 "Language-Team: German (Formal)\n"
 "Language: de-DE-formal\n"
@@ -13,13 +13,9 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco - https://localise.biz/"
 
-#: includes/functions.php:38
-msgid "Zip"
-msgstr "PLZ"
-
-#: includes/functions.php:42
-msgid "Distance"
-msgstr "Umkreis"
+#: includes/shortcodes.php:18
+msgid "Federal State – Filter"
+msgstr "Bundesland - Filter"
 
 #. Name of the plugin
 msgid "Ultimate Directory German PLZ und State Search"
@@ -42,3 +38,11 @@ msgstr ""
 #. Author URI of the plugin
 msgid "https://profiles.wordpress.org/svenl77"
 msgstr ""
+
+#: includes/functions.php:38
+msgid "Zip"
+msgstr "PLZ"
+
+#: includes/functions.php:42
+msgid "Distance"
+msgstr "Umkreis"
