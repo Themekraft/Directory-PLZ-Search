@@ -16,22 +16,22 @@ function tk_ud_directory_search_map_de( $atts ) {
 				<input type="hidden" id="tk-ud-plz-url" value="<?php echo TK_UD_PLZ_INSTALL_URL; ?>">
 				<select id="tk_ud_state">
 					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL; ?>assets/map/deMap.gif" value="none"><?php _e( 'Federal State – Filter', 'tk_ud_zip_search' ); ?></option>
-					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL; ?>assets/map/deMap8.gif" value="Baden-Württemberg">Baden-Württemberg</option>
-					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL; ?>assets/map/deMap9.gif" value="Bayern">Bayern</option>
-					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL; ?>assets/map/deMap11.gif" value="Berlin">Berlin</option>
-					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL; ?>assets/map/deMap12.gif" value="Brandenburg">Brandenburg</option>
-					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL; ?>assets/map/deMap4.gif" value="Bremen">Bremen</option>
-					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL; ?>assets/map/deMap2.gif" value="Hamburg">Hamburg</option>
-					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL; ?>assets/map/deMap6.gif" value="Hessen">Hessen</option>
-					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL; ?>assets/map/deMap13.gif" value="Mecklenburg-Vorpommern">Mecklenburg-Vorpommern</option>
-					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL; ?>assets/map/deMap3.gif" value="Niedersachsen">Niedersachsen</option>
-					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL; ?>assets/map/deMap5.gif" value="Nordrhein-Westfalen">Nordrhein-Westfalen</option>
-					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL; ?>assets/map/deMap7.gif" value="Rheinland-Pfalz">Rheinland-Pfalz</option>
-					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL; ?>assets/map/deMap10.gif" value="Saarland">Saarland</option>
-					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL; ?>assets/map/deMap14.gif" value="Sachsen">Sachsen</option>
-					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL; ?>assets/map/deMap15.gif" value="Sachsen-Anhalt">Sachsen-Anhalt</option>
-					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL; ?>assets/map/deMap1.gif" value="Schleswig-Holstein">Schleswig-Holstein</option>
-					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL; ?>assets/map/deMap16.gif" value="Thüringen">Thüringen</option>
+					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL; ?>assets/map/deMap8.gif" value="Baden-Württemberg"><?php _e( 'Baden-Wuerttemberg', 'tk_ud_zip_search' ); ?></option>
+					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL; ?>assets/map/deMap9.gif" value="Bayern"><?php _e( 'Bavaria', 'tk_ud_zip_search' ); ?></option>
+					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL; ?>assets/map/deMap11.gif" value="Berlin"><?php _e( 'Berlin', 'tk_ud_zip_search' ); ?></option>
+					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL; ?>assets/map/deMap12.gif" value="Brandenburg"><?php _e( 'Brandenburg', 'tk_ud_zip_search' ); ?></option>
+					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL; ?>assets/map/deMap4.gif" value="Bremen"><?php _e( 'Bremen', 'tk_ud_zip_search' ); ?></option>
+					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL; ?>assets/map/deMap2.gif" value="Hamburg"><?php _e( 'Hamburg', 'tk_ud_zip_search' ); ?></option>
+					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL; ?>assets/map/deMap6.gif" value="Hessen"><?php _e( 'Hesse', 'tk_ud_zip_search' ); ?></option>
+					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL; ?>assets/map/deMap13.gif" value="Mecklenburg-Vorpommern"><?php _e( 'Mecklenburg-Western Pomerania', 'tk_ud_zip_search' ); ?></option>
+					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL; ?>assets/map/deMap3.gif" value="Niedersachsen"><?php _e( 'Lower Saxony', 'tk_ud_zip_search' ); ?>Niedersachsen</option>
+					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL; ?>assets/map/deMap5.gif" value="Nordrhein-Westfalen"><?php _e( 'North Rhine-Westphalia', 'tk_ud_zip_search' ); ?></option>
+					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL; ?>assets/map/deMap7.gif" value="Rheinland-Pfalz"><?php _e( 'Rhineland-Palatinate', 'tk_ud_zip_search' ); ?></option>
+					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL; ?>assets/map/deMap10.gif" value="Saarland"><?php _e( 'Saarland', 'tk_ud_zip_search' ); ?></option>
+					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL; ?>assets/map/deMap14.gif" value="Sachsen"><?php _e( 'Saxony', 'tk_ud_zip_search' ); ?></option>
+					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL; ?>assets/map/deMap15.gif" value="Sachsen-Anhalt"><?php _e( 'Saxony-Anhalt', 'tk_ud_zip_search' ); ?></option>
+					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL; ?>assets/map/deMap1.gif" value="Schleswig-Holstein"><?php _e( 'Schleswig-Holstein', 'tk_ud_zip_search' ); ?></option>
+					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL; ?>assets/map/deMap16.gif" value="Thüringen"><?php _e( 'Thuringia', 'tk_ud_zip_search' ); ?></option>
 				</select>
 			</div>
 		</div>
