@@ -39,7 +39,7 @@ function tk_ud_plz_search_form(){
 			<?php }
 
 			if( isset( $tk_ud_search['display_distance'] ) && $tk_ud_search['display_distance'] == 'yes'){ ?>
-				<div class="col-md-6"><input type="number" value="" placeholder="<?php _e( 'Distance', 'tk_ud_zip_search' ); ?>" name="s_distance" id="tk-ud-s-distance"/></div>
+				<div class="col-md-6"><input type="number" value="5" placeholder="<?php _e( 'Distance', 'tk_ud_zip_search' ); ?>" name="s_distance" id="tk-ud-s-distance"/></div>
 			<?php } ?>
 			<input type="hidden" value="" id="tk-ud-s-plz-multi">
 		</div>
