@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Ultimate Directory German PLZ und State Search\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-12 12:15+0000\n"
-"PO-Revision-Date: 2017-03-12 12:15+0000\n"
+"POT-Creation-Date: 2017-03-16 10:52+0000\n"
+"PO-Revision-Date: 2017-03-16 10:55+0000\n"
 "Last-Translator: DA Admin <huck@huck-fresow.de>\n"
 "Language-Team: German (Formal)\n"
 "Language: de-DE-formal\n"
@@ -13,9 +13,69 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco - https://localise.biz/"
 
-#: includes/shortcodes.php:18
-msgid "Federal State – Filter"
-msgstr "Bundesland - Filter"
+#: includes/shortcodes.php:19
+msgid "Baden-Wuerttemberg"
+msgstr "Baden-Württemberg"
+
+#: includes/shortcodes.php:20
+msgid "Bavaria"
+msgstr "Bayern"
+
+#: includes/shortcodes.php:21
+msgid "Berlin"
+msgstr "Berlin"
+
+#: includes/shortcodes.php:22
+msgid "Brandenburg"
+msgstr "Brandenburg"
+
+#: includes/shortcodes.php:23
+msgid "Bremen"
+msgstr "Bremen"
+
+#: includes/shortcodes.php:24
+msgid "Hamburg"
+msgstr "Hamburg"
+
+#: includes/shortcodes.php:25
+msgid "Hesse"
+msgstr "Hessen"
+
+#: includes/shortcodes.php:26
+msgid "Mecklenburg-Western Pomerania"
+msgstr "Mecklenburg-Vorpommern"
+
+#: includes/shortcodes.php:27
+msgid "Lower Saxony"
+msgstr "Niedersachsen"
+
+#: includes/shortcodes.php:28
+msgid "North Rhine-Westphalia"
+msgstr "Nordrhein-Westfalen"
+
+#: includes/shortcodes.php:29
+msgid "Rhineland-Palatinate"
+msgstr "Rheinland-Pfalz"
+
+#: includes/shortcodes.php:30
+msgid "Saarland"
+msgstr "Saarland"
+
+#: includes/shortcodes.php:31
+msgid "Saxony"
+msgstr "Sachsen"
+
+#: includes/shortcodes.php:32
+msgid "Saxony-Anhalt"
+msgstr "Sachsen-Anhalt"
+
+#: includes/shortcodes.php:33
+msgid "Schleswig-Holstein"
+msgstr "Schleswig-Holstein"
+
+#: includes/shortcodes.php:34
+msgid "Thuringia"
+msgstr "Thüringen"
 
 #. Name of the plugin
 msgid "Ultimate Directory German PLZ und State Search"
@@ -46,3 +106,7 @@ msgstr "PLZ"
 #: includes/functions.php:42
 msgid "Distance"
 msgstr "Umkreis"
+
+#: includes/shortcodes.php:18
+msgid "Federal State – Filter"
+msgstr "Bundesland - Filter"

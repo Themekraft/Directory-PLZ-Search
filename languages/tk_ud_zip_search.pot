@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-12 12:14+0000\n"
+"POT-Creation-Date: 2017-03-16 10:51+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -24,6 +24,70 @@ msgstr ""
 
 #: includes/shortcodes.php:18
 msgid "Federal State – Filter"
+msgstr ""
+
+#: includes/shortcodes.php:19
+msgid "Baden-Wuerttemberg"
+msgstr ""
+
+#: includes/shortcodes.php:20
+msgid "Bavaria"
+msgstr ""
+
+#: includes/shortcodes.php:21
+msgid "Berlin"
+msgstr ""
+
+#: includes/shortcodes.php:22
+msgid "Brandenburg"
+msgstr ""
+
+#: includes/shortcodes.php:23
+msgid "Bremen"
+msgstr ""
+
+#: includes/shortcodes.php:24
+msgid "Hamburg"
+msgstr ""
+
+#: includes/shortcodes.php:25
+msgid "Hesse"
+msgstr ""
+
+#: includes/shortcodes.php:26
+msgid "Mecklenburg-Western Pomerania"
+msgstr ""
+
+#: includes/shortcodes.php:27
+msgid "Lower Saxony"
+msgstr ""
+
+#: includes/shortcodes.php:28
+msgid "North Rhine-Westphalia"
+msgstr ""
+
+#: includes/shortcodes.php:29
+msgid "Rhineland-Palatinate"
+msgstr ""
+
+#: includes/shortcodes.php:30
+msgid "Saarland"
+msgstr ""
+
+#: includes/shortcodes.php:31
+msgid "Saxony"
+msgstr ""
+
+#: includes/shortcodes.php:32
+msgid "Saxony-Anhalt"
+msgstr ""
+
+#: includes/shortcodes.php:33
+msgid "Schleswig-Holstein"
+msgstr ""
+
+#: includes/shortcodes.php:34
+msgid "Thuringia"
 msgstr ""
 
 #. Name of the plugin
