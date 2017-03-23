@@ -24,7 +24,7 @@ function tk_ud_directory_search_map_de( $atts ) {
 					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL; ?>assets/map/deMap2.gif" value="Hamburg"><?php _e( 'Hamburg', 'tk_ud_zip_search' ); ?></option>
 					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL; ?>assets/map/deMap6.gif" value="Hessen"><?php _e( 'Hesse', 'tk_ud_zip_search' ); ?></option>
 					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL; ?>assets/map/deMap13.gif" value="Mecklenburg-Vorpommern"><?php _e( 'Mecklenburg-Western Pomerania', 'tk_ud_zip_search' ); ?></option>
-					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL; ?>assets/map/deMap3.gif" value="Niedersachsen"><?php _e( 'Lower Saxony', 'tk_ud_zip_search' ); ?>Niedersachsen</option>
+					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL; ?>assets/map/deMap3.gif" value="Niedersachsen"><?php _e( 'Lower Saxony', 'tk_ud_zip_search' ); ?></option>
 					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL; ?>assets/map/deMap5.gif" value="Nordrhein-Westfalen"><?php _e( 'North Rhine-Westphalia', 'tk_ud_zip_search' ); ?></option>
 					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL; ?>assets/map/deMap7.gif" value="Rheinland-Pfalz"><?php _e( 'Rhineland-Palatinate', 'tk_ud_zip_search' ); ?></option>
 					<option data-src="<?php echo TK_UD_PLZ_INSTALL_URL; ?>assets/map/deMap10.gif" value="Saarland"><?php _e( 'Saarland', 'tk_ud_zip_search' ); ?></option>
