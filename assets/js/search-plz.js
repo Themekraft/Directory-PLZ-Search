@@ -14,7 +14,7 @@ jQuery(document).ready(function () {
             csvData = data.data;
         }
     };
-    Papa.parse( "http://dev.deutscher-abbruchverband.de/wp-content/plugins/directory-plz-search/assets/resources/plzTeam/data/zuordnung_plz_ort.csv", settings);
+    Papa.parse( plz.url, settings);
 
 
     // Alternativ für ajax
